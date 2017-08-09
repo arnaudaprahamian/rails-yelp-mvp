@@ -1,0 +1,7 @@
+<div>
+  <% @reviews.each_with_index do |review, index| %>
+    <h3>Review n°<%=index+1%></h3>
+    <p>Avis: <%= review.content %></p>
+    <p>Note: <%= review.rating.to_i %></p>
+  <% end %>
+</div>
