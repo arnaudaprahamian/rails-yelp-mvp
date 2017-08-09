@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
+  before_action :find_restaurant, only: [:new, :create]
   def new
     # we need @restaurant in our `simple_form_for`
-    @restaurant = Restaurant.find(params[:restaurant_id])
     @review = Review.new
   end
 
@@ -17,6 +17,10 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+  def find_restaurant
+    @restaurant = Restaurant.find(params[:id])
+  end
 
   def review_params
     params.require(:review).permit(:content, :rating)
