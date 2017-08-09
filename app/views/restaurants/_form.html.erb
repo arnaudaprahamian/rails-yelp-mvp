@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <%= simple_form_for @restaurant do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <%= f.input :category, collection: Restaurant::CATEGORIES, prompt: "Choose one"  %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
