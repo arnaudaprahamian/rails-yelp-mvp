@@ -1,2 +1,5 @@
-<h1 class="text-center">You want to add your restaurants ?</h1>
-<%= render "form" %>
+<div class="container item-center">
+  <h1 class="text-center">You want to add your restaurants ?</h1>
+  <%= render "restaurant_form" %>
+  <%= link_to "go back to index", restaurants_path, class: "btn btn-primary",style:"margin-top: 10px"%>
+</div>

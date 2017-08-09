@@ -1,8 +1,11 @@
 <div class="container text-center">
-<h1>My list of restaurants</h1>
-<% @restaurants.each do |restaurant| %>
-  <h2><%= restaurant.name %></h2>
-  <p><%= restaurant.address %></p>
-  <%= link_to "See details", restaurant, class: "btn btn-primary"%>
-<% end %>
+  <h1>My list of restaurants</h1>
+  <div>
+    <% @restaurants.each do |restaurant| %>
+      <h2><%= restaurant.name.capitalize %> - <%= restaurant.category.capitalize %></h2>
+      <%= link_to "See details", restaurant, class: "btn btn-primary"%>
+    <% end %>
+  </div>
+
+  <%= link_to "Add a new Restaurant", new_restaurant_path, class: "btn btn-warning",style:"margin-top: 10px"%>
 </div>

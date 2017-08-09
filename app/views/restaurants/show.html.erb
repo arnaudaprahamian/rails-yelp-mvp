@@ -1,2 +1,7 @@
-<h2><%= @restaurant.name %></h2>
-<p><%= @restaurant.address %></p>
+<div class="container text-center">
+  <h1><%= @restaurant.name %></h1>
+  <h2><%= @restaurant.category.capitalize %> - Restaurant</h2>
+  <p>Adresse: <%= @restaurant.address %></p>
+  <p>Numeros de telephone: <%= @restaurant.phone_number %></p>
+  <%= link_to "go back to index", restaurants_path, class: "btn btn-primary",style:"margin-top: 10px"%>
+</div>
