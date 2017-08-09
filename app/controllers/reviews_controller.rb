@@ -1,10 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :find_restaurant, only: [:new, :create]
-  def new
-    # we need @restaurant in our `simple_form_for`
-    @review = Review.new
-  end
-
+  before_action :find_restaurant, only: [:create]
   def create
     @review = Review.new(review_params)
     # we need `restaurant_id` to asssociate review with corresponding restaurant

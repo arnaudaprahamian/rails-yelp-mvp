@@ -14,8 +14,9 @@
       <%end%>
   </div>
   <div>
-    <h3>Make an review</h3>
-    <%= link_to "Rate Us", new_restaurant_review_path(@restaurant), class: "btn btn-green"  %>
+  <div class="container item-center">
+    <h3 class="text-center">You want to review <%= @restaurant.name %> ?</h3>
+    <%= render "review_form" %>
   </div>
   <%= link_to "go back to index", restaurants_path, class: "btn btn-primary", style:"margin-top: 10px"%>
 </div>
